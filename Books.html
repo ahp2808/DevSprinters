@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="/Styles.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .book-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .book-card {
+            width: calc(60% - 20px); /* Adjust the width as needed */
+            background-color: #ffffff;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            display: flex;
+        }
+
+        .book-card img {
+            width: 30%; /* Adjust the image width as needed */
+            height: auto;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .book-card-content {
+            flex: 1;
+            padding: 15px;
+        }
+
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .book-author {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .book-description {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .used-for {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .book-topic {
+            background-color: #007BFF; /* Background color */
+            color: #fff; /* Text color */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Spacing inside the div */
+            margin-bottom: 20px; /* Spacing between topics */
+        }
+
+        .book-topic h1 {
+            font-size: 24px; /* Larger font size for the topic title */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Books for Day to Day Wellbeing</h1>
+            <nav>
+                <ul>
+                    <li><a href="/Main.html">Home</a></li>
+                    <li><a href="/Index.html">About</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                    <li><a href=""><img src="/Images/User2.jpeg" alt="" width="20px"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="book-topic">
+            <h1>Mental Health and Wellbeing</h1>
+        </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book1.jpg" alt="Book 1">
+                    <div class="book-card-content">
+                        <div class="book-title">The Power of Now</div>
+                        <div class="book-author">Eckhart Tolle</div>
+                        <div class="book-description">This book explores mindfulness and living in the present moment, which can greatly improve mental well-being.</div>
+                        <div class="used-for"><strong>Used for:</strong> Mental Health and Well Being</div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book2.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">The Gifts of Imperfection</div>
+                        <div class="book-author">Brene Brown</div>
+                        <div class="book-description">Brené Brown's work on vulnerability and authenticity offers valuable insights into building self-esteem and resilience.</div>
+                        <div class="used-for"><strong>Used for:</strong> Mental Health and Wellbeing</div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book3.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">The Anxiety and Phobia Workbook</div>
+                        <div class="book-author">Edmund J Bourne</div>
+                        <div class="book-description">An excellent resource for those dealing with anxiety and phobias, providing practical exercises and strategies.</div>
+                        <div class="used-for"><strong>Used for:</strong> Mental Health and Wellbeing</div>
+                    </div>
+                </div>
+            </div>
+        <div class="book-topic">
+            <h1>Responsible Digital Usage</h1>
+        </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book4.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">Digital Minimalism</div>
+                        <div class="book-author">Cal Newport</div>
+                        <div class="book-description">This book provides guidance on how to use digital technology mindfully and regain control over your digital life.</div>
+                        <div class="used-for"><strong>Used for:</strong> Responsible Digital Usage</div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book5.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">Reclaiming Conversation</div>
+                        <div class="book-author">Sherry Turkle</div>
+                        <div class="book-description">Sherry Turkle explores the impact of technology on our ability to have meaningful conversations and offers insights into reconnecting with one another.</div>
+                        <div class="used-for"><strong>Used for:</strong> Responsible Digital Usage</div>
+                    </div>
+                </div>
+            </div>
+        <div class="book-topic">
+            <h1>Information Overload</h1>
+        </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book6.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">The Organized Mind</div>
+                        <div class="book-author">Daniel J Levitin</div>
+                        <div class="book-description">Levitin discusses strategies for managing information overload in the digital age and enhancing cognitive function.</div>
+                        <div class="used-for"><strong>Used for:</strong>Information Overload</div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book7.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">Deep Work</div>
+                        <div class="book-author">Cal Newport</div>
+                        <div class="book-description">This book offers a framework for achieving focused and distraction-free work, which is especially relevant in a world of information overload.</div>
+                        <div class="used-for"><strong>Used for:</strong>Information Overload</div>
+                    </div>
+                </div>
+            </div>
+        <div class="book-topic">
+            <h1>Social Media Pressure</h1>
+        </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book8.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">Irrestible</div>
+                        <div class="book-author">Adam Alter</div>
+                        <div class="book-description">Adam Alter delves into the addictive nature of technology and social media and offers insights into regaining control.</div>
+                        <div class="used-for"><strong>Used for:</strong>Social Media Pressure</div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book9.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">Reclaiming Your Life from a Traumatic Experience</div>
+                        <div class="book-author">Barbara O Rothbaum</div>
+                        <div class="book-description">This book can help individuals who have faced trauma, including trauma related to social media harassment.</div>
+                        <div class="used-for"><strong>Used for:</strong>Social Media Pressure</div>
+                    </div>
+                </div>
+            </div>
+        <div class="book-topic">
+            <h1>Online Harassment</h1>
+        </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book10.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">Hate Crimes in Cyberspace</div>
+                        <div class="book-author">Danielle Keats Citron</div>
+                        <div class="book-description">Citron discusses the legal and social aspects of online harassment and offers strategies for dealing with it.</div>
+                        <div class="used-for"><strong>Used for:</strong>Online Harassment</div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-row">
+                <div class="book-card">
+                    <img src="/Images/Book11.jpg" alt="Book 2">
+                    <div class="book-card-content">
+                        <div class="book-title">Crash Override</div>
+                        <div class="book-author">Zoë Quinn</div>
+                        <div class="book-description">This memoir addresses Zoë Quinn's personal experience with online harassment and provides guidance on combating it.</div>
+                        <div class="used-for"><strong>Used for:</strong>Online Harassment</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
