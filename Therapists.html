@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profiles</title>
+    <!-- <link rel="stylesheet" href="/Styles.css"> Corrected the stylesheet link -->
+    <style>
+        /* Your existing styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        nav ul {
+            list-style: none;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+
+        header {
+            color: white;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container h1 {
+            font-size: 24px;
+        }
+
+        .profile-card {
+            width: 700px;
+            margin: 20px;
+            background-color: #ffffff;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.2s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-card-header {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .profile-card-header i {
+            margin-right: 5px;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            flex-grow: 1;
+        }
+
+        .verified-box {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        .verified-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .unverified-icon {
+            color: #dc3545;
+        }
+
+        .program-rate {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .profile-info {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .visit-profile-button {
+            display: block;
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 0 0 10px 10px;
+            transition: background-color 0.3s;
+        }
+
+        .visit-profile-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Filter Section Styles */
+        .filter-section {
+            width: 300px;
+            background-color: #34ebc9;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .filter-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .filter-group {
+            margin-bottom: 10px;
+        }
+
+        .filter-label {
+            font-weight: bold;
+        }
+
+        .filter-select, .filter-input {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .filter-button {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .filter-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing HTML content here -->
+    <header>
+        <div class="container">
+            <h1>Therapists Page</h1>
+            <nav>
+                <ul>
+                    <li><a href="/Main.html">Home</a></li>
+                    <li><a href="/Index.html">About</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                    <li><a href=""><img src="/Images/User2.jpeg" alt="" width="20px"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <h2>Filters</h2>
+        <div class="filter-group">
+            <label for="occupation" class="filter-label">I am looking for a:</label>
+            <select id="occupation" class="filter-select">
+                <option value="all">Select any one</option> <!-- Added default value -->
+                <option value="Counsellor/Therapist">Counsellor/Therapist</option>
+                <option value="Dietitian">Dietitian</option>
+                <option value="Hypnotherapist">Hypnotherapist</option>
+                <option value="Life Coach">Life Coach</option>
+                <option value="Nutritionist">Nutritionist</option>
+                <option value="Complementary Therapist">Complementary Therapist</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="language" class="filter-label">Language:</label>
+            <select id="language" class="filter-select">
+                <option value="all">Select any one</option> <!-- Added default value -->
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Telugu">Telugu</option>
+                <!-- Add more language options here -->
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="amount" class="filter-label">Amount:</label>
+            <input type="number" id="amount" class="filter-input" placeholder="Enter amount">
+        </div>
+        
+        <button onclick="applyFilters()" class="filter-button">Apply Filters</button>
+    </div>
+
+    <!-- Filtered Cards -->
+    <div id="filtered-cards" class="container"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 PositiveVibes</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sample profile data (you can replace this with your data)
+        const data = [
+            {
+                name: "Monica Cooper",
+                verified: true,
+                imageUrl: "/Images/Therapist1.avif",
+                rate: "$50/hour",
+                location: "New York",
+                experience: "5 years",
+                occupation: "Counsellor/Therapist",
+                language: "English"
+            },
+            {
+                name: "Annabel Madyara",
+                verified: false,
+                imageUrl: "/Images/Therapist2.avif",
+                rate: "$40/hour",
+                location: "Los Angeles",
+                experience: "7 years",
+                occupation: "Counsellor/Therapist",
+                language: "Hindi"
+            },
+            {
+                name: "Clare Rusby",
+                verified: "True",
+                imageUrl: "/Images/Therapist3.avif",
+                rate: "$60/hour",
+                location: "Paris",
+                experience: "4 years",
+                occupation:"Counsellor/Therapist",
+                language: "Malayalam"
+            },
+            {
+                name: "Rochelle Anderson",
+                verified: "True",
+                imageUrl: "/Images/Dietitian.avif",
+                rate: "$30/hour",
+                location: "London",
+                experience: "7 years",
+                occupation:"Dietitian",
+                language: "English"
+            },
+            {
+                name: "Irene Lambert",
+                verified: "True",
+                imageUrl: "/Images/Dietitian2.avif",
+                rate: "$80/hour",
+                location: "New York",
+                experience: "6 years",
+                occupation:"Dietitian",
+                language: "Kannada"
+            },
+            {
+                name: "Carol Harris",
+                verified: "True",
+                imageUrl: "/Images/Dietitian3.avif",
+                rate: "$60/hour",
+                location: "London",
+                experience: "4 years",
+                occupation:"Dietitian",
+                language: "Telugu"
+            },
+            {
+                name: "Megan Berlin",
+                verified: "True",
+                imageUrl: "/Images/Hypnotherapist1.avif",
+                rate: "$80/hour",
+                location: "New Delhi",
+                experience: "5 years",
+                occupation:"Hypnotherapist",
+                language: "Hindi"
+            },
+            {
+                name: "Ian Stockbridge",
+                verified: "True",
+                imageUrl: "/Images/Hypnotherapist2.avif",
+                rate: "$60/hour",
+                location: "New York",
+                experience: "5 years",
+                occupation:"Hypnotherapist",
+                language: "English"
+            },
+            {
+                name: "Alexis Kim Pass",
+                verified: "True",
+                imageUrl: "/Images/Hypnotherapist3.avif",
+                rate: "$50/hour",
+                location: "London",
+                experience: "5 years",
+                occupation:"Hypnotherapist",
+                language: "English"
+            },
+            {
+                name: "Andy Grill",
+                verified: "True",
+                imageUrl: "/Images/Lifecoach1.avif",
+                rate: "$80/hour",
+                location: "New Delhi",
+                experience: "5 years",
+                occupation:"Life Coach",
+                language: "Telugu"
+            },
+            {
+                name: "Erika Emerson",
+                verified: "True",
+                imageUrl: "/Images/Lifecoach2.avif",
+                rate: "$70/hour",
+                location: "London",
+                experience: "4 years",
+                occupation:"Life Coach",
+                language: "English"
+            },
+            {
+                name: "Ellena Dunn",
+                verified: "True",
+                imageUrl: "/Images/Nutritionist1.avif",
+                rate: "$30/hour",
+                location: "New York",
+                experience: "6 years",
+                occupation:"Nutritionist",
+                language: "English"
+            },
+            {
+                name: "Steve Thom",
+                verified: "True",
+                imageUrl: "/Images/Nutritionist2.avif",
+                rate: "$70/hour",
+                location: "London",
+                experience: "4 years",
+                occupation:"Nutritionist",
+                language: "English"
+            },
+            {
+                name: "Angie Laslett",
+                verified: "True",
+                imageUrl: "/Images/ComplementaryTherapist1.avif",
+                rate: "$70/hour",
+                location: "London",
+                experience: "9 years",
+                occupation:"Complementary Therapist",
+                language: "English"
+            },
+            {
+                name: "Harry Adams",
+                verified: "False",
+                imageUrl: "/Images/ComplementaryTherapist2.avif",
+                rate: "$60/hour",
+                location: "Paris",
+                experience: "12 years",
+                occupation:"Complementary Therapist",
+                language: "English"
+            }
+            // Add more profiles here
+        ];
+
+        function populateCards(profiles) {
+            const container = document.getElementById("filtered-cards");
+            container.innerHTML = "";
+
+            profiles.forEach(profile => {
+                const card = document.createElement("div");
+                card.classList.add("profile-card");
+
+                const verifiedStatus = profile.verified ? "Verified" : "Not Verified";
+
+                card.innerHTML = `
+                    <div class="profile-card-header">
+                        <div class="profile-image">
+                            <img src="${profile.imageUrl}" alt="${profile.name}">
+                        </div>
+                        <span class="profile-name">${profile.name}</span>
+                        <div class="verified-box">
+                            <span class="verified-icon">&#10004;</span> ${verifiedStatus}
+                        </div>
+                    </div>
+                    <div class="profile-card-body">
+                        <div class="program-rate">Rate: ${profile.rate}</div>
+                        <div class="profile-info">
+                            <p><strong>Location:</strong> ${profile.location}</p>
+                            <p><strong>Experience:</strong> ${profile.experience}</p>
+                            <p><strong>Occupation:</strong> ${profile.occupation}</p>
+                            <p><strong>Language:</strong> ${profile.language}</p>
+                        </div>
+                        <a href="#" class="visit-profile-button">Visit Profile</a>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Initial population of cards
+        populateCards(data);
+
+        function applyFilters() {
+            // Get filter values
+            const occupation = document.getElementById("occupation").value;
+            const language = document.getElementById("language").value;
+            const amount = document.getElementById("amount").value;
+
+            // Implement filtering logic here based on filter values
+            let filteredProfiles = data;
+
+            if (occupation !== "all") {
+                filteredProfiles = filteredProfiles.filter(profile => profile.occupation === occupation);
+            }
+
+            if (language !== "all") {
+                filteredProfiles = filteredProfiles.filter(profile => profile.language === language);
+            }
+
+            if (amount) {
+                filteredProfiles = filteredProfiles.filter(profile => {
+                    // Convert rate to a numeric value for comparison
+                    const rateNumeric = parseInt(profile.rate.replace(/\D/g, ""));
+                    return rateNumeric >= parseInt(amount);
+                });
+            }
+
+            // Populate cards with filtered data
+            populateCards(filteredProfiles);
+        }
+    </script>
+</body>
+</html>
