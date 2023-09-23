@@ -1,0 +1,10 @@
+body{
+    padding: 50px 200px 50px 200px;
+}
+.heading{
+    font-weight:bolder;
+    font-size: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
