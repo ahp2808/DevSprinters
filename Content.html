@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Page</title>
+    <link rel="stylesheet" href="/Styles.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        
+        img {
+            height: 400px;
+            width: 350px;
+            border-radius: 3px;
+            transition: .5s;
+        }
+
+        body {
+            background: whitesmoke;
+        }
+
+        .card-container {
+            /* Add flex properties to display cards as flex items */
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            margin: 50px; /* Add margin between cards */
+            height: 500px;
+            box-shadow: 5px 5px 20px black;
+            overflow: hidden;
+        }
+        .card:hover{
+            cursor: pointer;
+        }
+        .intro {
+            height: 70px;
+            width: 350px;
+            padding: 6px;
+            box-sizing: border-box;
+            position: absolute;
+            background: rgb(27, 27,27, .5 );
+            color: white;
+            bottom: 240px;
+            transition: .5s;
+        }
+        h1{
+            margin: 10px;
+            font-size: 40px;
+        }
+        p{
+            font-size: 20px;
+            margin: 20px;
+            visibility: hidden;
+            opacity: 0;
+        }
+        span{
+            font-weight: bold;
+        }
+        .card:hover .intro{
+            height: 220px;
+            bottom: 240px;
+            background: black;
+        }
+        .card:hover p{
+            opacity: 1;
+            visibility: visible;
+        }
+        .card:hover img{
+            transform: scale(1.1) rotate(-3deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Content Page</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="content.html">Content</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Wrap the card containers in a separate div -->
+    <div class="card-container">
+        <div class="card">
+            <img src="" alt="Counselling">
+            <div class="intro">
+                <h1></h1>
+                <p><span></span></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="" alt="Counselling">
+            <div class="intro">
+                <h1></h1>
+                <p><span></span></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="" alt="Counselling">
+            <div class="intro">
+                <h1></h1>
+                <p><span></span></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="" alt="Counselling">
+            <div class="intro">
+                <h1></h1>
+                <p><span></span></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Website</p>
+        </div>
+    </footer>
+</body>
+</html>
