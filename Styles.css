@@ -35,52 +35,64 @@ nav a {
     color: #fff;
 }
 
+/* Enhance the hero section with colors */
 .hero {
-    background-image: url('your-background-image.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #009688; /* Teal */
     color: #fff;
     text-align: center;
     padding: 100px 0;
 }
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
 
+/* Style the hero text */
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .hero p {
     font-size: 1.25rem;
+    color: #f0f0f0; /* Light gray */
 }
 
+/* Style the "Learn More" button */
 .cta-button {
     display: inline-block;
-    background-color: #333;
+    background-color: #ff5722; /* Deep Orange */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth color transition */
 }
 
 .cta-button:hover {
-    background-color: #555;
+    background-color: #e64a19; /* Darker shade of Deep Orange on hover */
 }
 
-.about, .resources, .blog, .contact {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+/* Apply colorful backgrounds to sections */
+.about {
+    background-color: #2196f3; /* Blue */
 }
 
+.resources {
+    background-color: #f44336; /* Red */
+}
+
+.blog {
+    background-color: #673ab7; /* Deep Purple */
+}
+
+.contact {
+    background-color: #ff9800; /* Orange */
+}
+
+/* Style the blog posts */
 .blog-post {
     margin-bottom: 20px;
 }
 
+/* Style the footer */
 footer {
     background-color: #333;
     color: #fff;
