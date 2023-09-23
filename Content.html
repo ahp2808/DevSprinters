@@ -16,7 +16,7 @@
             height: 400px;
             width: 350px;
             border-radius: 3px;
-            transition: .5s;
+            transition: transform 0.5s ease; /* Added transition for smoother image scaling */
         }
 
         body {
@@ -24,56 +24,67 @@
         }
 
         .card-container {
-            /* Add flex properties to display cards as flex items */
             display: flex;
             justify-content: center;
         }
 
         .card {
-            margin: 50px; /* Add margin between cards */
-            height: 500px;
+            margin: 20px;
+            height: 350px;
+            width: 450px;
             box-shadow: 5px 5px 20px black;
             overflow: hidden;
+            position: relative; /* Added relative positioning for child elements */
         }
-        .card:hover{
+        
+        .card:hover {
             cursor: pointer;
+            box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.5); /* Enhance the box shadow on hover */
         }
+
         .intro {
-            height: 70px;
-            width: 350px;
+            height: 50px;
+            width: 100%;
             padding: 6px;
             box-sizing: border-box;
             position: absolute;
-            background: rgb(27, 27,27, .5 );
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
             color: white;
-            bottom: 240px;
-            transition: .5s;
+            transition: height 0.5s ease, background 0.5s ease; /* Added transitions for smoother animation */
         }
-        h1{
+        
+        .card:hover .intro {
+            height: 100%; /* Expand the intro height on hover */
+            background: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
+        }
+
+        h1 {
             margin: 10px;
-            font-size: 40px;
+            font-size: 20px; /* Reduced font size for better fit */
         }
-        p{
-            font-size: 20px;
-            margin: 20px;
+
+        p {
+            font-size: 16px; /* Adjusted font size for better fit */
+            margin: 10px 20px; /* Adjusted margins for better spacing */
             visibility: hidden;
             opacity: 0;
+            transition: opacity 0.5s ease; /* Added transition for smoother text fade-in */
         }
-        span{
-            font-weight: bold;
-        }
-        .card:hover .intro{
-            height: 220px;
-            bottom: 240px;
-            background: black;
-        }
-        .card:hover p{
+
+        .card:hover p {
             opacity: 1;
             visibility: visible;
         }
-        .card:hover img{
-            transform: scale(1.1) rotate(-3deg);
+
+        span {
+            font-weight: bold;
         }
+
+        .card:hover img {
+            transform: scale(1.05) rotate(-3deg); /* Slightly increased scaling on hover */
+        }
+        
     </style>
 </head>
 <body>
@@ -82,52 +93,44 @@
             <div class="container">
                 <h1>Content Page</h1>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="/Main.html">Home</a></li>
+                    <li><a href="/Index.html">About</a></li>
                     <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="content.html">Content</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     
-    <!-- Wrap the card containers in a separate div -->
     <div class="card-container">
         <div class="card">
-            <img src="" alt="Counselling">
+            <img src="/Images/Counseling.png" alt="Counselling">
             <div class="intro">
-                <h1></h1>
-                <p><span></span></p>
+                <h1>Find a Counsellor or Therapist</h1>
+                <p><span>Explore our professional counseling services.</span></p>
             </div>
         </div>
         <div class="card">
-            <img src="" alt="Counselling">
+            <img src="/Images/Blog.jpg" alt="Counselling">
             <div class="intro">
-                <h1></h1>
-                <p><span></span></p>
+                <h1>Blog or Educational Topics</h1>
+                <p><span>Read our latest blog posts and educational articles.</span></p>
             </div>
         </div>
         <div class="card">
-            <img src="" alt="Counselling">
+            <img src="/Images/Magazines.jpeg" alt="Counselling">
             <div class="intro">
-                <h1></h1>
-                <p><span></span></p>
+                <h1>Articles and Magazines</h1>
+                <p><span>Discover a collection of articles and magazines on various topics.</span></p>
             </div>
         </div>
         <div class="card">
-            <img src="" alt="Counselling">
+            <img src="/Images/Book1.jpeg" alt="Counselling">
             <div class="intro">
-                <h1></h1>
-                <p><span></span></p>
+                <h1>Books</h1>
+                <p><span>Explore our recommended books for personal growth and development.</span></p>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Your Website</p>
-        </div>
-    </footer>
 </body>
 </html>
